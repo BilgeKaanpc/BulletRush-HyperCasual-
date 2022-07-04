@@ -31,3 +31,4 @@ public class ScreenTouchController : MonoBehaviour, IPointerDownHandler, IPointe
 
     }
 }
+

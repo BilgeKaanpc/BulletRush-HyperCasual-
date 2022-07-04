@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 1727453476873654046}
   - component: {fileID: 1919601460443240645}
   - component: {fileID: 5045150237673858824}
+  - component: {fileID: 5804100744800243907}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4453065031313274632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.28, y: 2.08, z: 0}
+  m_LocalPosition: {x: 3.28, y: 1.69, z: 0}
   m_LocalScale: {x: 1, y: 0.7, z: 1}
   m_Children:
   - {fileID: 4390187258607586303}
@@ -194,8 +195,23 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &5804100744800243907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4453065031313274632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7669728637e02714f8471d199096394f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRigidbody: {fileID: 5045150237673858824}
+  moveSpeed: 400
+  player: {fileID: 0}
 --- !u!1 &7779927105827105312
 GameObject:
   m_ObjectHideFlags: 0
