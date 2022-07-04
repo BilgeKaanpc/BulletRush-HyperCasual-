@@ -12,4 +12,12 @@ public class EnemyController : MyCharacterController
         transform.LookAt(player.transform);
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.CompareTag("Bullet"))
+        {
+            gameObject.SetActive(false);
+            other.gameObject.SetActive(false);
+        }
+    }
 }
