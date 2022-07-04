@@ -9,5 +9,7 @@ public class EnemyController : MyCharacterController
         delta.y = 0;
         var direction = delta.normalized;
         Move(direction);
+        transform.LookAt(player.transform);
+
     }
 }
