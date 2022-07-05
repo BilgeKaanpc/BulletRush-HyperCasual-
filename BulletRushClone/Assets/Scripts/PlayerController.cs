@@ -9,6 +9,11 @@ public class PlayerController : MyCharacterController
 
     private List<Transform> enemies = new List<Transform>();
 
+    private int enemyAmount;
+    private void Start()
+    {
+        enemyAmount = FindObjectsOfType<EnemyController>().Length;
+    }
     private void FixedUpdate()
     {
         var direction = new Vector3(input.Direction.x, 0, input.Direction.y);
@@ -51,9 +56,13 @@ public class PlayerController : MyCharacterController
         }
     }
 
-
-
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.CompareTag("Finish"))
+        {
+            Win();
+        }
+    }
 
     private bool isShooting;
 
@@ -89,6 +98,15 @@ public class PlayerController : MyCharacterController
 
     private void Dead()
     {
-        
+        Time.timeScale = 0;
+    }
+    private void Win()
+    {
+        Time.timeScale = 0;
+        var current = FindObjectsOfType<EnemyController>().Length;
+        var result = current / enemyAmount;
+        var success = Mathf.Lerp(100, 0, result);
+        Debug.Log(success);
+
     }
 }
