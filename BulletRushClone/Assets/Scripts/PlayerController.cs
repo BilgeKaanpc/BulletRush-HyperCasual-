@@ -8,7 +8,6 @@ public class PlayerController : MyCharacterController
     [SerializeField] private ShootController shootController;
 
     private List<Transform> enemies = new List<Transform>();
-
     private int enemyAmount;
     private void Start()
     {
@@ -63,7 +62,6 @@ public class PlayerController : MyCharacterController
             Win();
         }
     }
-
     private bool isShooting;
 
     private void AutoShoot()
@@ -91,9 +89,6 @@ public class PlayerController : MyCharacterController
             isShooting = true;
             StartCoroutine(Do());
         }
-
-
-        
     }
 
     private void Dead()
