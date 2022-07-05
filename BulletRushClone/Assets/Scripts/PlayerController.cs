@@ -104,7 +104,7 @@ public class PlayerController : MyCharacterController
     {
         Time.timeScale = 0;
         var current = FindObjectsOfType<EnemyController>().Length;
-        var result = current / enemyAmount;
+        var result = current / (float)enemyAmount;
         var success = Mathf.Lerp(100, 0, result);
         Debug.Log(success);
 
