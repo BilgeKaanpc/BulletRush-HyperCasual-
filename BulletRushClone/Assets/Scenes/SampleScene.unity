@@ -1731,7 +1731,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1806834241
 MonoBehaviour:
@@ -1746,6 +1746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: -1721244742952435109, guid: 5425181c126d8e948b317f0ad8d6206e, type: 3}
+  delay: 0.1
 --- !u!1 &2043719400
 GameObject:
   m_ObjectHideFlags: 0
