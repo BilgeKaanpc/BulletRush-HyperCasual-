@@ -11,6 +11,6 @@ public class FollowControl : MonoBehaviour
     }
     private void LateUpdate()
     {
-        transform.position = target.position - offset;
+        transform.position = target.position + offset;
     }
 }
