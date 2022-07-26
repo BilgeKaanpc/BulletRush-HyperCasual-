@@ -2,7 +2,7 @@
 
 public class BulletController : MonoBehaviour
 {
-    //test
+    //test kedi
     [SerializeField] private float speed;
     private Vector3 _movement;
     public void Fire(Vector3 direction)
